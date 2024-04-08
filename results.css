@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
+
+
+/* css from homepage */
+
+/* header/hero section  */
+.large-cta-section {
+    background: #1e9fc4 linear-gradient(45deg, #3e3ed0, #1e9fc4 57%, #4fddd5) repeat scroll 0 0;
+    box-shadow: 0 6px 12px -4px rgba(54, 56, 66, 0.25) inset;
+    text-align: center;
+    z-index: 1;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.medium-large-wrapper {
+    padding-top: 50px;
+}
+
+.h2.large {
+    display: inline-block;
+    font-size: 5em;
+    font-family: "Roboto", sans-serif;
+}
+
+.white {
+    color: #fff;
+}
+
+.h2>.blue {
+    color: #CAF0F8;
+    font-weight: 600;
+}
+
+/* end of header/hero section */
+
+h3 {
+    color: palevioletred;
+    text-align: center;
+}
+
+.results {
+    text-align: center;
+}
+
+.studyStatus {
+    text-align: center;
+}
