@@ -5,7 +5,8 @@
 }
 
 .schedule-form .input-block {
-    background-color: color: rgba(202, 240, 248, 1);
+    /* background-color: rgba(202, 240, 248, 1); */
+    /* Corrected property */
     border: solid 1px #0077B6;
     width: 100%;
     height: 40px;
@@ -158,5 +159,3 @@
     top: -38em;
     z-index: 0;
 }
-
-
