@@ -4,7 +4,7 @@ This is the HomePage.html, HomePage.css, and the myscripts.js pages. It is the h
 
 # Results Page
 
-This is the results.html, results.css, and the results.js pages. THis is where the results and calculations will appear based on the information provided on the home page.
+This is the results.html, results.css, and the results.js pages. This is where the results and calculations will appear based on the information provided on the home page.
 
 # Documentation
 
