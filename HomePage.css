@@ -1,13 +1,115 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
 
+.schedule-form {
+    margin-top: 30px;
+}
 
-/* header/hero section  */
+.schedule-form .input-block {
+    /* background-color: rgba(202, 240, 248, 1); */
+    /* Corrected property */
+    border: solid 1px #0077B6;
+    width: 100%;
+    height: 40px;
+    padding: 25px;
+    position: relative;
+    margin-bottom: 20px;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.schedule-form .input-block.focus {
+    background-color: #fff;
+    border: solid 1px #0077B6;
+}
+
+.schedule-form .input-block.textarea {
+    height: auto;
+}
+
+.schedule-form .input-block.textarea .form-control {
+    height: auto;
+    resize: none;
+}
+
+.schedule-form .input-block label {
+    padding: 0 10px;
+    background: #fff;
+    position: absolute;
+    left: 8px;
+    top: 20px;
+    display: block;
+    margin: 0;
+    font-weight: 300;
+    z-index: 1;
+    color: #999;
+    font-size: 18px;
+    line-height: 10px;
+}
+
+.schedule-form .input-block .form-control {
+    background-color: transparent;
+    border: medium none;
+    border-radius: 0;
+    box-shadow: none;
+    color: #333;
+    font-size: 18px;
+    height: 40px;
+    padding: 0;
+    position: relative;
+    top: -20px;
+    z-index: 2;
+}
+
+.schedule-form .input-block .form-control:focus label {
+    top: 0;
+}
+
+/* send button at the bottom */
+.schedule-form .square-button {
+    background-size: 100%;
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #03045e), color-stop(20%, #0077b6), color-stop(40%, #00b4d8), color-stop(60%, #90e0ef), color-stop(80%, #caf0f8));
+    background-image: -moz-linear-gradient(left, #03045e, #0077b6, #00b4d8, #90e0ef, #caf0f8);
+    background-image: -webkit-linear-gradient(left, #03045e, #0077b6, #00b4d8, #90e0ef, #caf0f8);
+    background-image: linear-gradient(to right, #03045e, #0077b6, #00b4d8, #90e0ef, #caf0f8);
+    color: #fff;
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 0 60px;
+    height: 60px;
+    border: none;
+    width: 100%;
+}
+
+
+@media (min-width: 768px) {
+    .schedule-wrap {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+/*----page styles---*/
+.schedule-wrap {
+    padding: 15px;
+}
+
 .large-cta-section {
     background: #1e9fc4 linear-gradient(45deg, #3e3ed0, #1e9fc4 57%, #4fddd5) repeat scroll 0 0;
     box-shadow: 0 6px 12px -4px rgba(54, 56, 66, 0.25) inset;
     text-align: center;
     z-index: 1;
-    height: 250px;
+    height: 200px;
     position: relative;
     overflow: hidden;
 }
@@ -31,149 +133,29 @@
     font-weight: 600;
 }
 
-/* end of header/hero section */
 
-
-.contact-form {
-    margin-top: 30px;
+.cta-purple-email {
+    left: 0;
+    position: absolute;
+    top: 5em;
+    z-index: 0;
+    transform: translate3d(0px, 0%, 0px);
 }
 
-body,
-html {
-    height: 100%;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: #f0f0f0;
-    /* Placeholder color */
+.cta-blue-email {
+    bottom: -45px;
+    position: absolute;
+    right: 15%;
+    width: 15em;
+    z-index: 0;
+    transform: translate3d(86.875px, -8.6875%, 0px);
 }
 
-.schedule-form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.shedule-form {
-    background: white;
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-}
-
-.form-field {
-    margin-bottom: 1em;
-}
-
-.form-field label {
-    display: block;
-    margin-bottom: 0.5em;
-    color: #333;
-}
-
-.form-field input,
-.form-field textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-family: 'Arial', sans-serif;
-}
-
-.form-field textarea {
-    resize: vertical;
-    height: 100px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #0077b6;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-button:hover {
-    background-color: #005f87;
-}
-
-@media (max-width: 768px) {
-    .contact-form {
-        width: 90%;
-    }
-}
-
-
-/*  connected to javascript*/
-.questions li {
-    margin-bottom: 20px;
-}
-
-.next-button {
-    background-color: #005f87;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.next-button:hover {
-    background-color: #005f87;
-}
-
-.toggle-switch {
-    margin: 20px 0;
-}
-
-.toggle-switch input[type="radio"] {
-    display: none;
-}
-
-.toggle-switch label {
-    padding: 10px 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #ddd;
-    margin-right: -1px;
-    /* Remove gap between labels */
-}
-
-#extracurricularYes:checked+label,
-#workYes:checked+label {
-    background-color: #005f87;
-    color: white;
-}
-
-#extracurricularNo:checked+label,
-#workNo:checked+label {
-    background-color: #f44336;
-    color: white;
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
-    .questions li {
-        margin-bottom: 15px;
-    }
-
-    input[type="text"],
-    .next-button {
-        width: 100%;
-        margin: 10px 0;
-        /* Adjust for smaller screens */
-    }
-
-    .toggle-switch label {
-        display: block;
-        /* Stack labels vertically on small screens */
-    }
+.cta-left-line {
+    left: 0;
+    opacity: 0.7;
+    pointer-events: none;
+    position: absolute;
+    top: -38em;
+    z-index: 0;
 }

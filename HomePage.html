@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Corrected language attribute -->
+<html lang="en">
+
+<!-- code form homepage - keeping it here for now -->
+
 
 <head>
     <title>Study Schedule Calculator</title>
@@ -8,13 +11,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
     <link rel="stylesheet" href="HomePage.css">
 </head>
 
 <body>
-    <!-- header/hero section -->
     <section class="large-cta-section skrollable skrollable-between">
         <div class="medium-large-wrapper skrollable skrollable-after">
             <div class="medium-text-wrapper">
@@ -22,70 +25,57 @@
             </div>
         </div>
     </section>
-    <!-- end of headersection -->
 
-    <section class="schedule-form-container">
-        <div class="schedule-form">
-            <form class="form-group" id="form" autocomplete="off">
-                <ol class="questions">
-                    <li>
-                        <label for="q1">How many credits are you taking?</label>
-                        <input type="text" id="q1" name="q1">
-                        <!-- <button type="button" class="next-button" data-next="q2">Enter</button> -->
-                    </li>
-                    <li>
-                        <label for="q2">How many hours of class do you have?</label>
-                        <input type="text" id="q2" name="q2">
-                        <!-- <button type="button" class="next-button" data-next="extracurricularYes">Enter</button> -->
-                    </li>
-                    <!-- First set of questions -->
-                    <li>
-                        <label>Do you have any extracurricular activities?</label>
-                        <div class="toggle-switch">
-                            <input type="radio" id="extracurricularYes" name="extracurricular" value="yes">
-                            <label for="extracurricularYes">Yes</label>
-                            <input type="radio" id="extracurricularNo" name="extracurricular" value="no" checked>
-                            <label for="extracurricularNo">No</label>
-                        </div>
-                    </li>
-                    <li id="promptQuestion1" style="display: none;">
-                        <label for="q3">How many hours are spent on what you do per week?</label>
-                        <input type="text" id="promptInput1">
-                        <!-- <button type="button" class="next-button" data-next="workYes">Enter</button> -->
-                    </li>
-                    <!-- Second set of questions -->
-                    <li>
-                        <label>Do you work?</label>
-                        <div class="toggle-switch">
-                            <input type="radio" id="workYes" name="work" value="yes">
-                            <label for="workYes">Yes</label>
-                            <input type="radio" id="workNo" name="work" value="no" checked>
-                            <label for="workNo">No</label>
-                        </div>
-                    </li>
-                    <li id="promptQuestion2" style="display: none;">
-                        <label for="q4">How many hours per week?</label>
-                        <input type="text" id="promptInput2">
-                        <!-- <button type="button" class="next-button" data-next="workYes">Enter</button> -->
-                    </li>
-                    <li>
-                        <label for="q5">How many hours do you sleep a night?</label>
-                        <input type="text" id="q5" name="q5">
-                        <!-- <button type="button" class="next-button" data-next="q6">Enter</button> -->
-                    </li>
-                    <li>
-                        <label for="q6">How many hours do you set aside for other personal matters per week?</label>
-                        <input type="text" id="q6" name="q6">
-                        <!-- <button type="button" class="next-button">Enter</button> -->
-                    </li>
-                </ol>
-            </form>
-            <button type="button">Submit</button>
-            <p id="result"></p>
-        </div>
+
+    <!-- question form -->
+    <section class="schedule-wrap">
+        <form class="schedule-form" id="form">
+            <div class="col-sm-12">
+                <div class="input-block">
+                    <label for="q1">How many credits are you taking?</label>
+                    <input class="form-control" type="text" id="q1" name="q1">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="input-block">
+                    <label for="q2">How many hours of class do you have?</label>
+                    <input class="form-control" type="text" id="q2" name="q2">
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="input-block">
+                    <label for="q3">How many hours are spent on any extracurricular activities?</label>
+                    <input class="form-control" type="text" id="q3" name="q3">
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="input-block">
+                    <label for="q3">How many hours do you work?</label>
+                    <input class="form-control" type="text" id="q4" name="q4">
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="input-block">
+                    <label for="q5">How many hours do you set aside for other personal matters?</label>
+                    <input class="form-control" type="text" id="q5" name="q5">
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="input-block">
+                    <label for="q6">How many hours do you sleep a night?</label>
+                    <input class="form-control" type="text" id="q6" name="q6">
+                </div>
+            </div>
+            <!--    submit button connected to javascript to send to another page = results.  -->
+            <div class="col-sm-12">
+                <button type="button" class="square-button" id="submitButton">Submit</button>
+                <!-- <p id="result"></p> -->
+            </div>
+        </form>
     </section>
-    </div>
-
     <script src="myscripts.js"></script>
 </body>
 
