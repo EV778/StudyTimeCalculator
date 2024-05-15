@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var label = targetItem.querySelector("label");
             label.style.top = "-6px";
             label.style.fontSize = "16px";
-            label.style.color = "#0077B6";
+            label.style.color = "#FF9B54";
         }
     });
 
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             label.style.transition = "300ms";
             label.style.top = "-6px";
             label.style.fontSize = "16px";
-            label.style.color = "#0077B6";
+            label.style.color = "#FF9B54";
         });
 
         input.addEventListener("blur", function () {
