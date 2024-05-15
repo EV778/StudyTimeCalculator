@@ -7,7 +7,7 @@
 .schedule-form .input-block {
     /* background-color: rgba(202, 240, 248, 1); */
     /* Corrected property */
-    border: solid 1px #0077B6;
+    border: solid 1px #720026;
     width: 100%;
     height: 40px;
     padding: 25px;
@@ -21,7 +21,7 @@
 
 .schedule-form .input-block.focus {
     background-color: #fff;
-    border: solid 1px #0077B6;
+    border: solid 1px #720026;
 }
 
 .schedule-form .input-block.textarea {
@@ -69,10 +69,10 @@
 /* send button at the bottom */
 .schedule-form .square-button {
     background-size: 100%;
-    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #03045e), color-stop(20%, #0077b6), color-stop(40%, #00b4d8), color-stop(60%, #90e0ef), color-stop(80%, #caf0f8));
-    background-image: -moz-linear-gradient(left, #03045e, #0077b6, #00b4d8, #90e0ef, #caf0f8);
-    background-image: -webkit-linear-gradient(left, #03045e, #0077b6, #00b4d8, #90e0ef, #caf0f8);
-    background-image: linear-gradient(to right, #03045e, #0077b6, #00b4d8, #90e0ef, #caf0f8);
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #4f000b), color-stop(20%, #720026), color-stop(40%, #ce4257), color-stop(60%, #ff7f51), color-stop(80%, #ff9b54));
+    background-image: -moz-linear-gradient(left, #4f000b, #720026, #ce4257, #ff7f51, #ff9b54);
+    background-image: -webkit-linear-gradient(left, #4f000b, #720026, #ce4257, #ff7f51, #ff9b54);
+    background-image: linear-gradient(to right, #4f000b, #720026, #ce4257, #ff7f51, #ff9b54);
     color: #fff;
     font-size: 26px;
     text-transform: uppercase;
@@ -105,7 +105,7 @@
 }
 
 .large-cta-section {
-    background: #1e9fc4 linear-gradient(45deg, #3e3ed0, #1e9fc4 57%, #4fddd5) repeat scroll 0 0;
+    background: #4f000b linear-gradient(45deg, #720026, #4f000b 57%, #ce4257);
     box-shadow: 0 6px 12px -4px rgba(54, 56, 66, 0.25) inset;
     text-align: center;
     z-index: 1;
@@ -128,10 +128,10 @@
     color: #fff;
 }
 
-.h2>.blue {
+/* .h2>.blue {
     color: #CAF0F8;
     font-weight: 600;
-}
+} */
 
 
 .cta-purple-email {
