@@ -1,49 +1,30 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
+<!DOCTYPE html>
 
+<head>
+    <title>Study Hours Result</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="results.css">
+</head>
 
-/* css from homepage */
+<body>
+    <section class="large-cta-section skrollable skrollable-between">
+        <div class="medium-large-wrapper skrollable skrollable-after">
+            <div class="medium-text-wrapper">
+                <h2 class="h2 large white">Study Schedule Calculator</h2>
+            </div>
+        </div>
+    </section>
 
-/* header/hero section  */
-.large-cta-section {
-   background: #4f000b linear-gradient(45deg, #720026, #4f000b 57%, #ce4257);
-    box-shadow: 0 6px 12px -4px rgba(54, 56, 66, 0.25) inset;
-    text-align: center;
-    z-index: 1;
-    height: 250px;
-    position: relative;
-    overflow: hidden;
-}
+    <div class="result-section">
+        <p id="result" class="results"></p>
+        <p id="studyStatus" class="studyStatus"></p>
+    </div>
 
-.medium-large-wrapper {
-    padding-top: 50px;
-}
+    <script src="results.js"></script>
+</body>
 
-.h2.large {
-    display: inline-block;
-    font-size: 5em;
-    font-family: "Roboto", sans-serif;
-}
-
-.white {
-    color: #fff;
-}
-
-.h2>.blue {
-    color: #CAF0F8;
-    font-weight: 600;
-}
-
-/* end of header/hero section */
-
-h3 {
-    color: palevioletred;
-    text-align: center;
-}
-
-.results {
-    text-align: center;
-}
-
-.studyStatus {
-    text-align: center;
-}
+</html>
