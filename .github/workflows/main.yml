@@ -7,32 +7,39 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
- 
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Specifies the virtual host environment to run the job
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4 # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        uses: actions/checkout@v4
+        # This action checks out your repository under $GITHUB_WORKSPACE, so your job can access it.
 
-      - name: Install dependencies 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Specify the Node.js version you need for your project.
+        # This action sets up a Node.js environment, ensuring you use the correct version of Node.js as defined.
+
+      - name: Install dependencies
         run: npm install
+        # This command installs all the dependencies listed in your package.json file.
 
       - name: Build
         run: npm run build
+        # This command builds your application using its build script defined in package.json.
 
-      - name: Test
+      - name: Run tests
         run: npm test
+        # This command runs tests defined in your project, ensuring they pass before deployment.
 
       - name: Deploy to production
         run: |
           echo "Deploying to production"
-          # Add deployment commands here if any
+          # Here, add the actual deployment commands to deploy your application to production.
+        # This step would typically include deployment scripts or commands to update your production environment.
