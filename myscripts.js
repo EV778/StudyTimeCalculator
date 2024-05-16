@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 localStorage.setItem("studyHoursResult", studyHoursResult);
                 window.location.href = "results.html";
             } else {
-                alert("There was an error calculating the study hours. Please try again.");
+                alert("Not enough hours in the week. Rearrange your schedule to accommodate more daily study time.");
             }
         } else {
             alert("Please answer all questions.");
@@ -77,8 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return totalStudyHours.toFixed(2);
         }
     }
-
-
 
     function allQuestionsAnswered() {
         const ids = ["q1", "q2", "q3", "q4", "q5", "q6"];
