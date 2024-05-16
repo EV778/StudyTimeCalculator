@@ -18,11 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
             studyStatus = "You might be taking on too much. Consider prioritizing your tasks.";
         } else if (dailyStudyHours >= 0 && dailyStudyHours < 40 / 7) {
             studyStatus = "Not good. You will be struggling with insufficient daily study time. Consider reducing your workload.";
-        } else {
-            studyStatus = "Not enough hours in the day. Rearrange your schedule to accommodate more daily study time.";
+            // } else {
+            //     studyStatus = "Invalid data received. Please try submitting the form again.";
+            // }
         }
-    } else {
-        studyStatus = "Invalid data received. Please try submitting the form again.";
     }
 
     // Find the HTML elements where the results should be displayed
@@ -36,3 +35,5 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("One or more result elements were not found on this page.");
     }
 });
+
+//try adding in an error 
