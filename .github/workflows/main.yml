@@ -1,6 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
+name: CI/CD
 
 # Controls when the workflow will run
 on:
@@ -13,20 +11,41 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Specifies the virtual host environment to run the job
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+        # This action checks out a copy of your repository on the GitHub runner, making it available for the workflow.
 
-      # Runs a single command using the runners shell
-      # - name: Run a one-line script
-      #   run: echo Hello, world!
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' # Specify the Node.js version you need. Ensure it matches your project's requirements.
+        # Sets up a Node.js environment using the specified version, essential for running Node.js applications.
 
-     
+      - name: Install dependencies
+        run: |
+          echo "Node.js version:"
+          node -v  # Displays the Node.js version for debugging purposes.
+          echo "npm version:"
+          npm -v  # Displays the npm version for debugging purposes.
+          npm ci  # Performs a clean installation of npm dependencies, using package-lock.json.
+        # This step installs all necessary npm packages as specified in package-lock.json. 
+        # Using 'npm ci' helps ensure a clean, consistent installation.
+
+      - name: Build
+        run: npm run build
+        # Executes the build script defined in your package.json, typically compiling the application.
+
+      - name: Run tests
+        run: npm test
+        # Runs automated tests specified in your project, ensuring that your code meets all testing criteria before deployment.
+
+      - name: Deploy to production
+        run: |
+          echo "Deploying to production"
+          # Add actual deployment commands here
+        # This is a placeholder for deployment commands. Replace with your actual deployment script.
