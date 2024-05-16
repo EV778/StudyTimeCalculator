@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- code form homepage - keeping it here for now -->
-<!-- //tesing -->
-
 <head>
     <title>Study Schedule Calculator</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic" rel="stylesheet">
@@ -17,8 +14,13 @@
 </head>
 
 <body>
-    <section class="large-cta-section">
-        <div class="medium-large-wrapper">
+    <!-- <nav>
+        <div class="logo">
+            Study Schedule Calculator
+        </div>
+    </nav> -->
+    <section class="large-cta-section skrollable skrollable-between">
+        <div class="medium-large-wrapper skrollable skrollable-after">
             <div class="medium-text-wrapper">
                 <h2 class="h2 large white">Study Schedule Calculator</h2>
             </div>
@@ -26,25 +28,25 @@
     </section>
 
 
+
     <!-- question form -->
     <section class="schedule-wrap">
         <form class="schedule-form" id="form">
             <div class="col-sm-12">
                 <div class="input-block">
-                    <label for="q1">How many credits are you taking this semester?</label>
+                    <label for="q1">Number of credits you are taking?</label>
                     <input class="form-control" type="text" id="q1" name="q1">
                 </div>
             </div>
             <div class="col-sm-12">
                 <div class="input-block">
-                    <label for="q2">How many hours of class do you have per week?</label>
+                    <label for="q2">Hours of class per week?</label>
                     <input class="form-control" type="text" id="q2" name="q2">
                 </div>
             </div>
-
             <div class="col-sm-12">
                 <div class="input-block">
-                    <label for="q3">How many hours are spent on any extracurricular activities per week?</label>
+                    <label for="q3">Hours spent on extracurricular per week?</label>
                     <input class="form-control" type="text" id="q3" name="q3">
                 </div>
             </div>
@@ -52,29 +54,29 @@
             <div class="col-sm-12">
                 <div class="input-block">
                     <label for="q3">How many hours do you work per week?</label>
+
                     <input class="form-control" type="text" id="q4" name="q4">
                 </div>
             </div>
 
             <div class="col-sm-12">
                 <div class="input-block">
-                    <label for="q5">How many hours do you set aside for other personal matters per week?</label>
+                    <label for="q5">Hours for personal matters per week?</label>
                     <input class="form-control" type="text" id="q5" name="q5">
                 </div>
             </div>
             <div class="col-sm-12">
                 <div class="input-block">
-                    <label for="q6">How many hours do you sleep a night per week?</label>
+                    <label for="q6">How many hours do you sleep a night?</label>
                     <input class="form-control" type="text" id="q6" name="q6">
                 </div>
             </div>
-            <!--    submit button connected to javascript to send to another page = results.  -->
             <div class="col-sm-12">
                 <button type="button" class="square-button" id="submitButton">Submit</button>
-                <!-- <p id="result"></p> -->
             </div>
         </form>
     </section>
+
     <script src="myscripts.js"></script>
 </body>
 
